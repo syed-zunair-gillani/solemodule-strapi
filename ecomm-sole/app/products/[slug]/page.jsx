@@ -1,74 +1,30 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import { useParams } from "next/navigation";
-import { useDispatch, useSelector } from "react-redux";
-import { Col, Row } from "antd";
+import { Axios } from "@/config/Axios";
+import SingleProductTemp from "@/template/single-product";
+import React from "react";
+var qs = require('qs')
 
-// import {
-//   fetchProductDetailRequest,
-//   fetchSoleProductDetailRequest,
-// } from "../../../ redux/actions/shopActions";
-import LayoutOne from "../../../components/layout/LayoutOne";
-import ProductDetailLayout from "../../../components/detail/product/ProductDetailLayout";
-import Container from "../../../components/other/Container";
-import { fetchWooCommerceProducts } from "@/services/wooComm";
-import ShopSidebar from "@/components/shop/ShopSidebar";
+async function getData(slug) {
+  const params = qs.stringify({
+    populate: [
+      'Images', 'Attributes', "Other_Attributes", "Reviews", "category"
+    ],
+    'filters[Slug][$eq]': slug
+  })
 
-function productDetail() {
-  const dispatch = useDispatch();
-  const params = useParams();
-  const { slug } = params;
-  console.log("params -------", slug);
-  const [selectedProds, setSelectedProds] = useState(null);
-  //   const shopState = useSelector((state) => state.shopReducer);
-  //   const { productDetail, soleProductDetail, soleModuleProducts } = shopState;
-  useEffect(() => {
-    fetchWooCommerceProducts({ limit: 8 })
-      .then((res) => {
-        // setProducts(res.data);
-        let productData = res.data.find((product) => product.slug === slug);
-        setSelectedProds(productData);
-        console.log(res.data);
-        console.log(productData);
-        // dispatch(fetchSoleModuleProductsSuccess(res.data));
-      })
-      .catch((err) => {
-        console.log(err.message);
-      });
-  }, []);
-  //   useEffect(() => {
-  //     dispatch(fetchProductDetailRequest(slug));
-  //     dispatch(fetchSoleProductDetailRequest(slug));
-  //     // selectedProduct = soleModuleProducts.find(
-  //     //   (product) => product.slug === slug
-  //     // );
+  console.log("🚀 ~ getData ~ params:", params)
 
-  //     setSelectedProds(
-  //       soleModuleProducts.data.find((product) => product.slug === slug)
-  //     );
-  //   }, []);
+  const product = await Axios.get(`/products?${params}`);
+  const data = product.data.data?.[0]?.attributes  ;
+ 
+  return {
+    data: data
+  }
+}
 
-  useEffect(() => {
-    console.log("selected products here", selectedProds);
-  }, [selectedProds]);
+async function productDetail(props) {
+  const { data } = await getData(props?.params?.slug)
   return (
-    <LayoutOne title="Product detail">
-      <div className="product-detail">
-        <Container>
-          <Row>
-            {/* <Col xs={24} md={6}>
-              <ShopSidebar showShortcut />
-            </Col> */}
-            <Col offset={1} xs={48}>
-              {selectedProds && <ProductDetailLayout data={selectedProds} />}
-            </Col>
-          </Row>
-        </Container>
-      </div>
-      {/* <Container>
-        <PartnerOne />
-      </Container> */}
-    </LayoutOne>
+    <SingleProductTemp data={data}/>
   );
 }
 

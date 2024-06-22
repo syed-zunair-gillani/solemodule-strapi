@@ -9,38 +9,35 @@ import ProductDetailTab from "./elements/ProductDetailTab";
 import data1 from "../../../database.json";
 
 function ProductDetailLayout({ data, type, hideTab, style }) {
-  const productDataJson = JSON.parse(
-    data.meta_data.find((data) => data.key === "product_data_json").value
-  );
-  console.log("jsondatafromwordpess", productDataJson);
-  if (type === "fluid") {
-    return (
-      <div className="product-detail" style={style}>
-        <Row gutter={30}>
-          <Col md={10}>
-            {/* <ProductDetailImages type="column" images={data?.images[0]?.src} /> */}
-          </Col>
-          <Col md={14}>
-            <ProductDetailContent type="fluid" data={data} />
-          </Col>
-          <Col md={24}>
-            {!hideTab && (
-              <ProductDetailTab
-                fullDescription={data.fullDescription}
-                specifications={data.specifications}
-                reviews={data.reviews}
-              />
-            )}
-          </Col>
-        </Row>
-      </div>
-    );
-  }
+  
+  // if (type === "fluid") {
+  //   return (
+  //     <div className="product-detail" style={style}>
+  //       <Row gutter={30}>
+  //         <Col md={10}>
+  //           {/* <ProductDetailImages type="column" images={data?.images[0]?.src} /> */}
+  //         </Col>
+  //         <Col md={14}>
+  //           <ProductDetailContent type="fluid" data={data} />
+  //         </Col>
+  //         <Col md={24}>
+  //           {!hideTab && (
+  //             <ProductDetailTab
+  //               fullDescription={data.fullDescription}
+  //               specifications={data.specifications}
+  //               reviews={data.reviews}
+  //             />
+  //           )}
+  //         </Col>
+  //       </Row>
+  //     </div>
+  //   );
+  // }
   return (
     <div className="product-detail" style={style}>
       <Row gutter={30}>
         <Col md={12}>
-          <ProductDetailImages images={`${process.env.NEXT_PUBLIC_BACKEND_URL}${data?.Images?.data}`} />
+          <ProductDetailImages images={data?.Images?.data} />
         </Col>
         <Col md={12}>
           <ProductDetailContent data={data} />
@@ -48,11 +45,12 @@ function ProductDetailLayout({ data, type, hideTab, style }) {
         <Col xs={24} md={24}>
           {!hideTab && (
             <ProductDetailTab
-              fullDescription={productDataJson.full_description}
-              specifications={productDataJson.specification}
+              fullDescription={data?.Description}
+              specifications={data?.Attributes}
               reviews={data1.product[0].reviews}
             />
           )}
+          
         </Col>
       </Row>
     </div>

@@ -1,5 +1,7 @@
 import React from "react";
 import { Rate, Tabs, Form, Input, Button, Row, Col } from "antd";
+import Markdown from "react-markdown";
+
 
 const { TabPane } = Tabs;
 
@@ -20,6 +22,7 @@ const ReviewItem = ({ data }) => {
 };
 
 function ProductDetailTab({ fullDescription, specifications, reviews }) {
+
   const onFinish = (values) => {};
 
   const onFinishFailed = (errorInfo) => {};
@@ -30,14 +33,9 @@ function ProductDetailTab({ fullDescription, specifications, reviews }) {
           {/* <div className="product-detail-tab__description">
             {fullDescription}
           </div> */}
-          <ul style={{ fontSize: "18px", listStyleType: "none" }}>
-            {fullDescription.map((point) => (
-              <li>
-                <strong>{point.key} :</strong>
-                {point.value}
-              </li>
-            ))}
-          </ul>
+          <div style={{ fontSize: "18px", listStyleType: "none" }}>
+            <Markdown>{fullDescription}</Markdown>
+          </div>
 
           {/* <div dangerouslySetInnerHTML={{ __html: fullDescription }} /> */}
         </TabPane>
@@ -47,31 +45,31 @@ function ProductDetailTab({ fullDescription, specifications, reviews }) {
               <tbody>
                 <tr>
                   <td>Weight</td>
-                  <td>{specifications.weight}</td>
+                  <td>{specifications?.Weight}</td>
                 </tr>
 
                 <tr>
                   <td>Dimensions</td>
                   <td>
-                    {specifications.length} x {specifications.width} x{" "}
-                    {specifications.height}
+                    {specifications?.Length} x {specifications?.Width} x{" "}
+                    {specifications?.Height}
                   </td>
                 </tr>
                 <tr>
                   <td>Color</td>
-                  <td>{specifications.color}</td>
+                  <td>{specifications?.Color}</td>
                 </tr>
                 <tr>
                   <td>Material</td>
-                  <td>{specifications.material}</td>
+                  <td>{specifications?.Material}</td>
                 </tr>
                 <tr>
                   <td>Accessories</td>
-                  <td>{specifications.accessories}</td>
+                  <td>{specifications?.Accessories}</td>
                 </tr>
                 <tr>
                   <td>Assembly</td>
-                  <td>{specifications.assembly}</td>
+                  <td>{specifications?.Assembly}</td>
                 </tr>
               </tbody>
             </table>

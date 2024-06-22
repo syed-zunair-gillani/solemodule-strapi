@@ -25,7 +25,6 @@ import { fetchWooCommerceProducts } from "@/services/wooComm";
 import LayoutOne from "@/components/layout/LayoutOne";
 // import { fetchWooCommerceCategories } from "../services/wooComm";
 function ProductsTemp({data}) {
-  console.log("🚀 ~ ProductsTemp ~ data:", data)
 
   const [currentProductTabsCategory, setCurrentProductTabsCategory] = useState({
     daleProducts: "",

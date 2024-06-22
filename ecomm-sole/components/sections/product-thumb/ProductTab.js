@@ -19,7 +19,7 @@ function ProductTab({
   headerType = "grid",
   productCol,
 }) {
-  console.log("🚀 ~ data: 123", data)
+  console.log("🚀 ~ data:", data)
 
   const { TabPane } = Tabs;
   const onChooseCategory = (key) => {
@@ -28,20 +28,24 @@ function ProductTab({
   const renderTabContent = () => (
     <FetchDataHandle
       data={data}
-      renderData={(data) => (
-        <Row
-          gutter={[
-            { xs: 0, md: 35 },
-            { xs: 0, md: 60 },
-          ]}
-        >
-          {data?.data?.map((item, index) => (
-            <Col key={index} {...productCol}>
-              <Product className={productClassName} data={item?.attributes} />
-            </Col>
-          ))}
-        </Row>
-      )}
+      renderData={(data) => {
+        return (
+          <Row
+            gutter={[
+              { xs: 0, md: 35 },
+              { xs: 0, md: 60 },
+            ]}
+          >
+            {data?.map((item, index) => {
+              return(
+                <Col key={index} {...productCol}>
+                <Product className={productClassName} data={item?.attributes} />
+              </Col>
+              )
+            })}
+          </Row>
+        );
+      }}
     />
   );
   return (

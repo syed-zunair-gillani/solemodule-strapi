@@ -21,7 +21,13 @@
     "Color": {
       "type": "string"
     },
-    "Features": {
+    "Material": {
+      "type": "string"
+    },
+    "Accessories": {
+      "type": "string"
+    },
+    "Assembly": {
       "type": "string"
     }
   }

@@ -14,7 +14,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchCartRequest } from "@/redux/actions/cartActions";
 
 function Product({ data, className, type, countdownLast = 100000000 }) {
-  console.log("🚀 ~ Product ~ data: 123", data)
   
   const dispatch = useDispatch();
   const [modalVisible, setModalVisible] = useState(false);
@@ -101,16 +100,16 @@ function Product({ data, className, type, countdownLast = 100000000 }) {
             className={`product ${classNames(className)}`}
           >
             <div className="product-img">
-              {console.log("I am image tag here", data.images)}
               <Link
                 legacyBehavior
                 href={process.env.PUBLIC_URL + `/product/[slug]`}
-                as={process.env.NEXT_PUBLIC_URL + `/products/${data.slug}`}
+                as={process.env.NEXT_PUBLIC_URL + `/products/${data.Slug}`}
               >
-                <a title={data.name}>
+                <a title={data.Title}>
                   <img
                     style={{
                       borderRadius: "9px",
+                      objectFit: 'cover',
                       // boxSizing: "border-box",
                       width:
                         window.innerWidth <= 412
@@ -131,9 +130,9 @@ function Product({ data, className, type, countdownLast = 100000000 }) {
                           : "230px",
                     }}
                     width={230}
-                    height={140}
+                    height={230}
                     src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${data?.Images?.data?.[0]?.attributes?.url}`}
-                    alt={data.name}
+                    alt={data?.Title}
                   />
                 </a>
               </Link>
@@ -185,7 +184,7 @@ function Product({ data, className, type, countdownLast = 100000000 }) {
                   style={{ textAlign: "start" }}
                   className="product-content text-muted"
                 >
-                  {"productDataJson.categories"}
+                  {data?.category?.data?.attributes?.Name}
                 </h4>
                 <span className="product-content text-muted">
                   <Rate
@@ -269,19 +268,19 @@ function Product({ data, className, type, countdownLast = 100000000 }) {
                   style={{ textAlign: "start" }}
                   className="product-content pdDesc"
                 >
-                  <strong>Width :</strong> {`${data.dimensions.width} cm`}
+                  <strong>Width :</strong> {`${data?.Attributes?.Width} cm`}
                 </p>{" "}
                 <p
                   style={{ textAlign: "start" }}
                   className="product-content pdDesc"
                 >
-                  <strong>Height :</strong> {`${data.dimensions.height} cm`}
+                  <strong>Height :</strong> {`${data?.Attributes?.Height} cm`}
                 </p>{" "}
                 <p
                   style={{ textAlign: "start" }}
                   className="product-content pdDesc"
                 >
-                  <strong>Length :</strong> {`${data.dimensions.length} cm`}
+                  <strong>Length :</strong> {`${data?.Attributes?.Length} cm`}
                 </p>
                 {/* <div
                   className="product-content pdDesc"

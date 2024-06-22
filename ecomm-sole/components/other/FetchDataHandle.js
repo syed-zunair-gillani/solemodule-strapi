@@ -7,7 +7,7 @@ export default function FetchDataHandle({
   emptyDescription = "No product in this category",
   renderData,
 }) {
-  console.log(data);
+  console.log('Data', data);
   return data?.loading ? (
     <Skeleton active />
   ) : data?.error ? (

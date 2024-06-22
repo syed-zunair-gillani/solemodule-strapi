@@ -12,7 +12,9 @@ export interface SectionsAttributes extends Schema.Component {
     Length: Attribute.Decimal;
     Weight: Attribute.Decimal;
     Color: Attribute.String;
-    Features: Attribute.String;
+    Material: Attribute.String;
+    Accessories: Attribute.String;
+    Assembly: Attribute.String;
   };
 }
 

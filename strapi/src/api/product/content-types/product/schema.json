@@ -34,11 +34,6 @@
       "repeatable": false,
       "component": "sections.attributes"
     },
-    "Other_Attributes": {
-      "type": "component",
-      "repeatable": true,
-      "component": "sections.other-attribute"
-    },
     "Slug": {
       "type": "uid",
       "targetField": "Title"
@@ -56,6 +51,9 @@
       "mappedBy": "product"
     },
     "Description": {
+      "type": "richtext"
+    },
+    "Product_short_info": {
       "type": "richtext"
     }
   }

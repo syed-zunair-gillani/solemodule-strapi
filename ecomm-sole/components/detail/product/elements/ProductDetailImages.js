@@ -1,11 +1,11 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import Slider from "react-slick";
 import classNames from "classnames";
 import { Button, Modal } from "antd";
 
 function ProductDetailImages({ type, images }) {
-  console.log("🚀 ~ ProductDetailImages ~ images:", images)
+  console.log("🚀 ~ ProductDetailImages ~ images:", images);
 
   const [caruselShow, setCarauselShow] = React.useState(false);
   const onModalClose = (e) => {
@@ -52,7 +52,12 @@ function ProductDetailImages({ type, images }) {
             {images &&
               images.map((img, index) => (
                 <div key={index} className="slide-item">
-                  <img src={images[index].src} alt="Product image" />
+                  <img
+                    src={
+                      process.env.NEXT_PUBLIC_BACKEND_URL + img?.attributes?.url
+                    }
+                    alt="Product image"
+                  />
                 </div>
               ))}
           </Slider>
@@ -60,11 +65,19 @@ function ProductDetailImages({ type, images }) {
         <div className="product-detail-images-small">
           <Slider asNavFor={nav1} ref={(c) => setNav2(c)} {...slider2Settings}>
             {images &&
-              images.map((img, index) => (
-                <div key={index} className="slide-item">
-                  <img src={images[index].src} alt="Product image" />
-                </div>
-              ))}
+              images.map((img, index) => {
+                return (
+                  <div key={index} className="slide-item">
+                    <img
+                      src={
+                        process.env.NEXT_PUBLIC_BACKEND_URL +
+                        img?.attributes?.url
+                      }
+                      alt="Product image"
+                    />
+                  </div>
+                );
+              })}
           </Slider>
         </div>
       </div>
@@ -94,7 +107,13 @@ function ProductDetailImages({ type, images }) {
               {images &&
                 images.map((img, index) => (
                   <div key={index} className="slide-item">
-                    <img src={images[index].src} alt="Product image" />
+                    <img
+                      src={
+                        process.env.NEXT_PUBLIC_BACKEND_URL +
+                        img?.attributes?.url
+                      }
+                      alt="Product image"
+                    />
                   </div>
                 ))}
             </Slider>
@@ -108,7 +127,13 @@ function ProductDetailImages({ type, images }) {
               {images &&
                 images.map((img, index) => (
                   <div key={index} className="slide-item">
-                    <img src={images[index].src} alt="Product image" />
+                    <img
+                      src={
+                        process.env.NEXT_PUBLIC_BACKEND_URL +
+                        img?.attributes?.url
+                      }
+                      alt="Product image"
+                    />
                   </div>
                 ))}
             </Slider>

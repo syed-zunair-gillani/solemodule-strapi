@@ -877,7 +877,6 @@ export interface ApiProductProduct extends Schema.CollectionType {
     Price: Attribute.Decimal;
     Images: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
     Attributes: Attribute.Component<'sections.attributes'>;
-    Other_Attributes: Attribute.Component<'sections.other-attribute', true>;
     Slug: Attribute.UID<'api::product.product', 'Title'>;
     category: Attribute.Relation<
       'api::product.product',
@@ -890,6 +889,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
       'api::review.review'
     >;
     Description: Attribute.RichText;
+    Product_short_info: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

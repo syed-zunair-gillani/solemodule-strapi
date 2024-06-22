@@ -20,7 +20,10 @@ import { onAddProductToWishlist } from "../../../../common/wishlistServices";
 import { addWishlistData } from "../../../../apis/wishlist";
 import { fetchWishListRequest } from "../../../../redux/actions/wishlistActions";
 import * as wishlistApis from "../../../../apis/wishlist";
+import Markdown from "react-markdown";
+
 export default function ProductDetailContent({ data, type }) {
+  console.log("🚀 ~ ProductDetailContent ~ data:", data);
   const dispatch = useDispatch();
 
   const [user, setUser] = useState(null);
@@ -211,7 +214,7 @@ export default function ProductDetailContent({ data, type }) {
       <h5 className="product-type">{"Office Storage"}</h5>
       <h2 className="product-detail-content__name">{data?.Title}</h2>
       <Rate value={4} />
-      <h3 className="product-detail-content__price">
+      <div className="product-detail-content__price">
         {data.discount && <del>{formatCurrency(data?.price)}</del>}{" "}
         <h5
           style={{ textAlign: "start" }}
@@ -219,7 +222,7 @@ export default function ProductDetailContent({ data, type }) {
         >
           {data?.discount
             ? formatCurrency(data?.price - data?.discount)
-            : formatCurrency(data?.price)}{" "}
+            : formatCurrency(data?.Price)}{" "}
           / Unit (incl of all taxes)
         </h5>
         {/* <div className="product-detail-content__price-discount">
@@ -230,8 +233,12 @@ export default function ProductDetailContent({ data, type }) {
           </h5>
        
         </div> */}
-      </h3>
-      <div dangerouslySetInnerHTML={{ __html: data.short_description }} />
+      </div>
+      {/* <div dangerouslySetInnerHTML={{ __html: data.Product_short_info }} /> */}
+      <div>
+        <Markdown>{data.Product_short_info}</Markdown>
+      </div>
+
       {/* <div className="product-detail-content__delivery">Free delivery</div> */}
 
       <QuantitySelector

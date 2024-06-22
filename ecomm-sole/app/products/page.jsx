@@ -5,7 +5,7 @@ var qs = require('qs')
 async function getData() {
   const params = qs.stringify({
     populate: [
-      'Images', 'Attributes', "Other_Attributes", "Reviews"
+      'Images', 'Attributes', "Other_Attributes", "Reviews", "category"
     ]
   })
 

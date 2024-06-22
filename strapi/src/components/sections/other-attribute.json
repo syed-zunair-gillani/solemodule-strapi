@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_sections_other_attributes",
+  "info": {
+    "displayName": "Other Attribute"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Value": {
+      "type": "string"
+    }
+  }
+}

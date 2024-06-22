@@ -1,0 +1,16 @@
+[
+  {
+    "title": "INFOMATION",
+    "items": [
+      { "title": "About us", "href": "/about" },
+      { "title": "Contact us", "href": "/other/contact-us" },
+      { "title": "Terms & Conditions", "href": "/other/terms-and-conditions" },
+      { "title": "Shipping Policy", "href": "/other/contact-us" },
+      {
+        "title": "Cancellation & Refund Policy",
+        "href": "/other/cancelation-and-refund-policy"
+      },
+      { "title": "Privacy Policy", "href": "/other/privacy-policy" }
+    ]
+  }
+]

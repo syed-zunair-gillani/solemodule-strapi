@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sections_attributes",
+  "info": {
+    "displayName": "Attribute",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Width": {
+      "type": "decimal"
+    },
+    "Height": {
+      "type": "decimal"
+    },
+    "Length": {
+      "type": "decimal"
+    },
+    "Weight": {
+      "type": "decimal"
+    },
+    "Color": {
+      "type": "string"
+    },
+    "Features": {
+      "type": "string"
+    }
+  }
+}

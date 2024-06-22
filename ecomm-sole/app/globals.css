@@ -1,0 +1,64 @@
+* {
+  font-family: "CeraPro Regular", sans-serif;
+}
+body {
+  background: #f9f5eb;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.5715;
+}
+a {
+  text-decoration: none;
+  color: #242464;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
+}
+p {
+  font-size: 16px;
+}
+.slick-slider .slick-arrow {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 50px !important;
+  width: 50px !important;
+  background-color: rgb(217, 132, 42) !important;
+  color: #fff;
+  border-radius: 999px;
+  text-align: center;
+  line-height: calc(16 / 50 * 1em);
+  transition: all 0.3s ease; /* Assuming $transition is a variable for transition timing */
+}
+
+.slick-arrow:hover {
+  opacity: 0.9;
+  /* background-color: lighten(rgb(0, 128, 0), 10%); */ /* This line is commented out because it references Sass functions */
+}
+
+::selection {
+  color: #fff;
+  background: pink;
+}
+
+.ant-breadcrumb {
+  margin-bottom: 1.875em;
+  font-weight: bold;
+  font-size: 16px;
+}
+.product-content-padding {
+  margin-top: 60px;
+}
+@media only screen and (max-width: 600px) {
+  .product-content-padding {
+    margin-top: 0px;
+  }
+}

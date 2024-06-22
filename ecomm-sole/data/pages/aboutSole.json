@@ -1,0 +1,38 @@
+{
+  "featuresData": [
+    {
+      "number": 100,
+      "suffixes": "%",
+      "object": "Happy Client",
+      "icon": "/assets/images/pages/soleFeatures/sf-1.png"
+    },
+    {
+      "number": 142,
+      "object": "Our Engineer",
+      "icon": "/assets/images/pages/soleFeatures/sf-2.png"
+    },
+    {
+      "number": 16,
+      "prefix": "+",
+      "object": "Our Farm",
+      "icon": "/assets/images/pages/soleFeatures/sf-3.png"
+    },
+    {
+      "number": 100,
+      "suffixes": "%",
+      "object": "Happy Client",
+      "icon": "/assets/images/pages/soleFeatures/sf-4.png"
+    },
+    {
+      "number": 142,
+      "object": "Our Engineer",
+      "icon": "/assets/images/pages/soleFeatures/sf-5.png"
+    },
+    {
+      "number": 16,
+      "prefix": "+",
+      "object": "Our Farm",
+      "icon": "/assets/images/pages/soleFeatures/sf-6.png"
+    }
+  ]
+}

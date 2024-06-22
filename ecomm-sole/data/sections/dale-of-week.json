@@ -1,0 +1,66 @@
+{
+  "one": [
+    {
+      "title": "PEN STAND",
+      "description": "Our Accessories Stand features a dedicated pen holder that keeps your favorite writing tools upright and ready for action. Say goodbye to cluttered desks and hello to a tidier workspace.",
+      "iconSrc": "/assets/images/sections/dale-of-week/one/1.png"
+    },
+    {
+      "title": "Wallet Holder",
+      "description": "Say farewell to the days of misplaced wallets! Our Accessories Stand comes with a specially designed slot to accommodate your wallet. No more hunting around the house for your wallet – it’s right where you left it, making your daily routines smoother and stress-free.",
+      "iconSrc": "/assets/images/sections/dale-of-week/one/2.png"
+    },
+    {
+      "title": "Mobile Stand",
+      "description": "The integrated mobile stand offers a secure and convenient spot to prop up your phone. Whether you’re watching videos, participating in virtual meetings, or simply checking notifications, your device stays at the perfect viewing angle.",
+      "iconSrc": "/assets/images/sections/dale-of-week/one/3.png"
+    },
+    {
+      "title": "STORAGE SOLUTIONS",
+      "description": "Maximize space utilization with creative storage solutions tailored to your needs.",
+      "iconSrc": "/assets/images/sections/dale-of-week/one/4.png"
+    },
+    {
+      "title": "Keys Holder",
+      "description": "Make meal preparation a breeze with a well-organized kitchen and pantry.",
+      "iconSrc": "/assets/images/sections/dale-of-week/one/3.png"
+    },
+    {
+      "title": "MOVING AND RELOCATION ASSISTANCE",
+      "description": "Keep track of your keys effortlessly with the built-in keys holder. No more frantically searching for your keys as you head out the door. They now have a designated spot on the stand, making grabbing them on your way out a breeze.",
+      "iconSrc": "/assets/images/sections/dale-of-week/one/4.png"
+    }
+  ],
+  "two": [
+    {
+      "title": "HOME DECLUTTERING",
+      "description": "Say goodbye to clutter and welcome a clutter-free home that feels spacious and inviting.",
+      "iconSrc": "/assets/images/sections/dale-of-week/one/1.png"
+    },
+    {
+      "title": "HOME OFFICE SETUP",
+      "description": "Enhance productivity with an organized workspace that boosts efficiency and focus.",
+      "iconSrc": "/assets/images/sections/dale-of-week/one/2.png"
+    },
+    {
+      "title": "CLOSET AND WARDROBE ORGANIZATION",
+      "description": "Streamline your attire and accessories for easy selection and a stress-free dressing experience.",
+      "iconSrc": "/assets/images/sections/dale-of-week/one/3.png"
+    },
+    {
+      "title": "STORAGE SOLUTIONS",
+      "description": "Maximize space utilization with creative storage solutions tailored to your needs.",
+      "iconSrc": "/assets/images/sections/dale-of-week/one/4.png"
+    },
+    {
+      "title": "KITCHEN AND PANTRY OPTIMIZATION",
+      "description": "Make meal preparation a breeze with a well-organized kitchen and pantry.",
+      "iconSrc": "/assets/images/sections/dale-of-week/one/3.png"
+    },
+    {
+      "title": "MOVING AND RELOCATION ASSISTANCE",
+      "description": "Ease the stress of moving with our professional packing and unpacking services.",
+      "iconSrc": "/assets/images/sections/dale-of-week/one/4.png"
+    }
+  ]
+}

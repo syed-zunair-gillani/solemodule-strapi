@@ -1,0 +1,27 @@
+[
+  {
+    "iconSrc": "/assets/images/other/benefits/freeHomeDelivery.svg",
+    "name": "FREE HOME DELIVERY",
+    "description": "Dedicated support"
+  },
+  {
+    "iconSrc": "/assets/images/other/benefits/productTested.svg",
+    "name": "PRODUCT TESTED",
+    "description": "For all order over 99$"
+  },
+  {
+    "iconSrc": "/assets/images/other/benefits/spaceSavingDesign.svg",
+    "name": "SPACE SAVING DESIGN",
+    "description": "If good have prolems"
+  },
+  {
+    "iconSrc": "/assets/images/other/benefits/longLasting.svg",
+    "name": "LONG LASTING",
+    "description": "100% secure payment"
+  },
+  {
+    "iconSrc": "/assets/images/other/benefits/valueForMoney.svg",
+    "name": "VALUE FOR MONEY",
+    "description": "Dedicated support"
+  }
+]
